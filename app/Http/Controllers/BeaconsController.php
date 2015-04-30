@@ -19,6 +19,13 @@ class BeaconsController extends Controller {
             '4' => 'Simulacion Gerencial',
             '5' => 'Practica Profesional'
         ];
+        $this->evaluaciones = [
+            '1' => 'Pregunta rápida',
+            '2' => 'Quiz (varias preguntas)',
+            '3' => 'Trabajo en grupo',
+            '4' => 'Pregunta individual',
+            '5' => 'Otra'
+        ];
     }
 
     /**
@@ -30,8 +37,9 @@ class BeaconsController extends Controller {
     {
         $beacons = Beacon::latest()->get();
         $materias = $this->materias;
+        $evaluaciones = $this->evaluaciones;
 
-        return view( 'beacons.index', compact( 'beacons', 'materias' ) );
+        return view( 'beacons.index', compact( 'beacons', 'materias','evaluaciones' ) );
     }
 
     /**
@@ -62,8 +70,9 @@ class BeaconsController extends Controller {
     public function edit( Beacon $beacon )
     {
         $materias = $this->materias;
+        $evaluaciones = $this->evaluaciones;
 
-        return view( 'beacons.edit', compact( 'beacon', 'materias' ) );
+        return view( 'beacons.edit', compact( 'beacon', 'materias','evaluaciones' ) );
     }
 
     public function update( Beacon $beacon, Request $request )

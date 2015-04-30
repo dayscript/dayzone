@@ -7,6 +7,10 @@
     {!! Form::select('materia',$materias,null,['class' => 'form-control']) !!}
 </div>
 <div class="form-group">
+    {!! Form::label('evaluacion','Evaluación:') !!}
+    {!! Form::select('evaluacion',$evaluaciones,null,['class' => 'form-control']) !!}
+</div>
+<div class="form-group">
     {!! Form::label('mesa','Mesa:') !!}
     {!! Form::text('mesa',null,['class' => 'form-control']) !!}
 </div>

@@ -23,6 +23,7 @@ class CreateBeaconsTable extends Migration {
             $table->string('materia');
             $table->string('mensaje');
             $table->string('mesa');
+            $table->string('evaluacion');
 			$table->timestamps();
 		});
 	}

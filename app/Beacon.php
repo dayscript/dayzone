@@ -12,7 +12,8 @@ class Beacon extends Model {
         'image',
         'materia',
         'mesa',
-        'mensaje'
+        'mensaje',
+        'evaluacion'
     ];
 
 
