@@ -57,6 +57,11 @@ class BeaconsController extends Controller {
         else
             $beacon->nombremateria = "";
 
+        if ( $beacon->evaluacion && isset( $this->evaluaciones[ $beacon->evaluacion ] ) )
+            $beacon->evaluacion = $this->evaluaciones[ $beacon->evaluacion ];
+        else
+            $beacon->evaluacion = "";
+
         return $beacon;
         //return view( 'beacons.show', compact( 'beacon' ) );
     }
