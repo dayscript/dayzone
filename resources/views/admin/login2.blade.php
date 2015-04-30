@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Admin Login | Josh Admin Template</title>
+    <title>Iniciar sesión | Dayzone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- global level css -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -18,7 +18,7 @@
             <div class=" col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3  col-md-5 col-md-offset-4 col-lg-4 col-lg-offset-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title text-center">Sign In</h3>
+                        <h3 class="panel-title text-center">Iniciar sesión</h3>
                     </div>
                     <div class="panel-body">
                         <form action="{{ route('signin') }}" autocomplete="on" method="post" role="form">
@@ -39,9 +39,9 @@
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="remember-me" type="checkbox" value="Remember Me">Remember Me</label>
+                                    <input name="remember-me" type="checkbox" value="Remember Me">Recordarme</label>
                             </div>
-                            <input type="submit" value="Login" class="btn btn-primary btn-block btn-lg" />
+                            <input type="submit" value="Entrar" class="btn btn-primary btn-block btn-lg" />
                         </form>
                     </div>
                 </div>

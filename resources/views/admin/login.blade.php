@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Login | Josh Admin Template</title>
+    <title>Login | Dayzone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- global level css -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -29,13 +29,13 @@
                             <form action="{{ route('signin') }}" autocomplete="on" method="post" role="form">
                                 <h3 class="black_bg">
                                     <img src="{{ asset('assets/img/logo.png') }}" alt="josh logo">
-                                    <br>Log in</h3>
+                                    <br>Iniciar sesión</h3>
                                     <!-- CSRF Token -->
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                                     
                                 <div class="form-group {{ $errors->first('email', 'has-error') }}">
                                     <label style="margin-bottom:0px;" for="email" class="uname control-label"> <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                                        E-mail
+                                        Usuario
                                     </label>
                                     <input id="email" name="email" required type="email" placeholder="E-mail" value="{{{ Input::old('email') }}}" />
                                     <div class="col-sm-12">
@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="form-group {{ $errors->first('password', 'has-error') }}">
                                     <label style="margin-bottom:0px;" for="password" class="youpasswd"> <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                                        Password
+                                        Contraseña
                                     </label>
                                     <input id="password" name="password" required type="password" placeholder="eg. X8df!90EO" />
                                     <div class="col-sm-12">
@@ -53,17 +53,17 @@
                                 </div>
                                 <p class="keeplogin">
                                     <input type="checkbox" name="remember-me" id="remember-me" value="remember-me" />
-                                    <label for="remember-me">Keep me logged in</label>
+                                    <label for="remember-me">Mantenerme logueado</label>
                                 </p>
                                 <p class="login button">
-                                    <input type="submit" value="Login" class="btn btn-success" />
+                                    <input type="submit" value="Entrar" class="btn btn-success" />
                                 </p>
                                 <p class="change_link">
                                     <a href="#toforgot">
-                                        <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Forgot password</button>
+                                        <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Olvidé mi contraseña</button>
                                     </a>
                                     <a href="#toregister">
-                                        <button type="button" class="btn btn-responsive botton-alignment btn-success btn-sm" style="float:right;">Sign up</button>
+                                        <button type="button" class="btn btn-responsive botton-alignment btn-success btn-sm" style="float:right;">Registrarme</button>
                                     </a>
                                 </p>
                             </form>

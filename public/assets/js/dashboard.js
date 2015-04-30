@@ -238,13 +238,13 @@ var data = [], totalPoints = 300;
           separator: ',',
           decimal: '.'
     }
-    var demo = new countUp("myTargetElement1", 12.52, 9500, 0, 6, options);
+    var demo = new countUp("myTargetElement1", 12.52, 9521, 0, 6, options);
     demo.start();
-    var demo = new countUp("myTargetElement2", 1, 100, 0, 6, options);
+    var demo = new countUp("myTargetElement2", 1, 92, 0, 6, options);
     demo.start();
-    var demo = new countUp("myTargetElement3", 24.02, 5000, 0, 6, options);
+    var demo = new countUp("myTargetElement3", 24.02, 51, 0, 6, options);
     demo.start();
-    var demo = new countUp("myTargetElement4", 1254, 8000, 0, 6, options);
+    var demo = new countUp("myTargetElement4", 1254, 52, 0, 6, options);
     demo.start();
     var demo = new countUp("myTargetElement1.1", 1254, 98000, 0, 6, options);
     demo.start();

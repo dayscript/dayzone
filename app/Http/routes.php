@@ -96,7 +96,12 @@ Route::group(array('prefix' => 'admin'), function () {
         Route::get('{groupId}/restore', array('as' => 'restore/group', 'uses' => 'GroupsController@getRestore'));
 		Route::get('any_user', 'UsersController@getUserAccess');
 		Route::get('admin_only', 'UsersController@getAdminOnlyAccess');
-    });	
+    });
+    /**
+     * Resource routes
+     */
+    Route::resource('beacons','BeaconsController');
+
 
     Route::post('crop_demo','JoshController@crop_demo');
 	# Remaining pages will be called from below controller method
