@@ -46,8 +46,7 @@
                             <table class="table table-bordered">
                                 <thead>
                                 <tr>
-                                    <th>UUID</th>
-                                    <th>Nombre</th>
+                                    <th>Nombre / UUID</th>
                                     <th>Major</th>
                                     <th>Minor</th>
                                     <th>Materia</th>
@@ -60,8 +59,8 @@
 
                                 @foreach ($beacons as $beacon)
                                     <tr>
-                                        <td><a href="{{ action('BeaconsController@show',[$beacon->id]) }}">{{{ $beacon->uuid }}}</a></td>
-                                        <td>{{{ $beacon->name }}}</td>
+                                        <td>{{{ $beacon->name }}}<br/>
+                                            <a href="{{ action('BeaconsController@show',[$beacon->id]) }}">{{{ $beacon->uuid }}}</a></td>
                                         <td>{{{ $beacon->major }}}</td>
                                         <td>{{{ $beacon->minor }}}</td>
                                         @if($beacon->materia)
