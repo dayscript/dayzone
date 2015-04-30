@@ -14,7 +14,10 @@ class BeaconSeeder extends DatabaseSeeder {
             'minor'   => '35537',
             'materia' => 1,
             'mesa'    => 54,
-            'image'   => '/assets/img/beacons/ice.png'
+            'image'   => '/assets/img/beacons/ice.png',
+            'mensaje'=>'Recuerda que tienes un 15% de descuento para tu posgrado de Gerencia Estratégica del Diseño.
+
+            Para ver todas las opciones de posgrados haz click a continuación.'
         ] );
         Beacon::create( [
             'name'    => 'Morado - Blueberry Pie',
