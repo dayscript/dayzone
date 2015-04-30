@@ -20,6 +20,7 @@ class BeaconsController extends Controller {
             '5' => 'Practica Profesional'
         ];
         $this->evaluaciones = [
+            '0'=> 'Ninguna',
             '1' => 'Pregunta rápida',
             '2' => 'Quiz (varias preguntas)',
             '3' => 'Trabajo en grupo',
