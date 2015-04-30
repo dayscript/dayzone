@@ -156,7 +156,7 @@
                                 <li>
                                     <i class="livicon warning" data-n="dashboard" data-s="20" data-c="white"
                                        data-hc="white"></i>
-                                    <a href="#">sin espacio en dicsco</a>
+                                    <a href="#">sin espacio en disco</a>
                                     <small class="pull-right">
                                         <span class="livicon paddingright_10" data-n="timer" data-s="10"></span>
                                         Hace 8 minutos
@@ -326,6 +326,88 @@
                     </ul>
                     </li>
 
+                    <li {!! (Request::is(
+                    'admin/users') || Request::is('admin/users/create') || Request::is('admin/users/*') ||
+                    Request::is('admin/deleted_users') ? 'class="active"' : '') !!}>
+                    <a href="#">
+                        <i class="livicon" data-name="user" data-size="18" data-c="#6CC66C" data-hc="#6CC66C"
+                           data-loop="true"></i>
+                        <span class="title">Users</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li {!! (Request::is(
+                        'admin/users') ? 'class="active" id="active"' : '') !!}>
+                        <a href="{{ URL::to('admin/users') }}">
+                            <i class="fa fa-angle-double-right"></i>
+                            Users
+                        </a>
+                        </li>
+                        <li {!! (Request::is(
+                        'admin/users/create') ? 'class="active" id="active"' : '') !!}>
+                        <a href="{{ URL::to('admin/users/create') }}">
+                            <i class="fa fa-angle-double-right"></i>
+                            Add New User
+                        </a>
+                        </li>
+                        <li {!! ((Request::is(
+                        'admin/users/*')) && !(Request::is('admin/users/create')) ? 'class="active" id="active"' : '')
+                        !!}>
+                        <a href="{{ URL::route('users.show',Sentry::getUser()->id) }}">
+                            <i class="fa fa-angle-double-right"></i>
+                            View Profile
+                        </a>
+                        </li>
+                        <li {!! (Request::is(
+                        'admin/deleted_users') ? 'class="active" id="active"' : '') !!}>
+                        <a href="{{ URL::to('admin/deleted_users') }}">
+                            <i class="fa fa-angle-double-right"></i>
+                            Deleted Users
+                        </a>
+                        </li>
+                    </ul>
+                    </li>
+                    <li {!! (Request::is(
+                    'admin/groups') || Request::is('admin/groups/create') || Request::is('admin/groups/*') ?
+                    'class="active"' : '') !!}>
+                    <a href="#">
+                        <i class="livicon" data-name="users" data-size="18" data-c="#418BCA" data-hc="#418BCA"
+                           data-loop="true"></i>
+                        <span class="title">Groups</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li {!! (Request::is(
+                        'admin/groups') ? 'class="active" id="active"' : '') !!}>
+                        <a href="{{ URL::to('admin/groups') }}">
+                            <i class="fa fa-angle-double-right"></i>
+                            Groups
+                        </a>
+                        </li>
+                        <li {!! (Request::is(
+                        'admin/groups/create') ? 'class="active" id="active"' : '') !!}>
+                        <a href="{{ URL::to('admin/groups/create') }}">
+                            <i class="fa fa-angle-double-right"></i>
+                            Add New Group
+                        </a>
+                        </li>
+                        <li {!! (Request::is(
+                        'admin/groups/any_user') ? 'class="active" id="active"' : '') !!}>
+                        <a href="{{ URL::to('admin/groups/any_user') }}">
+                            <i class="fa fa-angle-double-right"></i>
+                            Any User Access
+                        </a>
+                        </li>
+                        @if (Sentry::getUser()->hasAccess('admin'))
+                            <li {!! (Request::is('admin/groups/admin_only') ? 'class="active" id="active"' : '') !!}>
+                            <a href="{{ URL::to('admin/groups/admin_only') }}">
+                                <i class="fa fa-angle-double-right"></i>
+                                Admin Only Access
+                            </a>
+                            </li>
+                        @endif
+                    </ul>
+                    </li>
                     <li {!! (Request::is(
                     'admin/form_builder') || Request::is('admin/form_builder2') || Request::is('admin/buttonbuilder') ||
                     Request::is('admin/gridmanager') ? 'class="active"' : '') !!}>
@@ -814,88 +896,7 @@
                         </li>
                     </ul>
                     </li>
-                    <li {!! (Request::is(
-                    'admin/users') || Request::is('admin/users/create') || Request::is('admin/users/*') ||
-                    Request::is('admin/deleted_users') ? 'class="active"' : '') !!}>
-                    <a href="#">
-                        <i class="livicon" data-name="user" data-size="18" data-c="#6CC66C" data-hc="#6CC66C"
-                           data-loop="true"></i>
-                        <span class="title">Users</span>
-                        <span class="fa arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li {!! (Request::is(
-                        'admin/users') ? 'class="active" id="active"' : '') !!}>
-                        <a href="{{ URL::to('admin/users') }}">
-                            <i class="fa fa-angle-double-right"></i>
-                            Users
-                        </a>
-                        </li>
-                        <li {!! (Request::is(
-                        'admin/users/create') ? 'class="active" id="active"' : '') !!}>
-                        <a href="{{ URL::to('admin/users/create') }}">
-                            <i class="fa fa-angle-double-right"></i>
-                            Add New User
-                        </a>
-                        </li>
-                        <li {!! ((Request::is(
-                        'admin/users/*')) && !(Request::is('admin/users/create')) ? 'class="active" id="active"' : '')
-                        !!}>
-                        <a href="{{ URL::route('users.show',Sentry::getUser()->id) }}">
-                            <i class="fa fa-angle-double-right"></i>
-                            View Profile
-                        </a>
-                        </li>
-                        <li {!! (Request::is(
-                        'admin/deleted_users') ? 'class="active" id="active"' : '') !!}>
-                        <a href="{{ URL::to('admin/deleted_users') }}">
-                            <i class="fa fa-angle-double-right"></i>
-                            Deleted Users
-                        </a>
-                        </li>
-                    </ul>
-                    </li>
-                    <li {!! (Request::is(
-                    'admin/groups') || Request::is('admin/groups/create') || Request::is('admin/groups/*') ?
-                    'class="active"' : '') !!}>
-                    <a href="#">
-                        <i class="livicon" data-name="users" data-size="18" data-c="#418BCA" data-hc="#418BCA"
-                           data-loop="true"></i>
-                        <span class="title">Groups</span>
-                        <span class="fa arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li {!! (Request::is(
-                        'admin/groups') ? 'class="active" id="active"' : '') !!}>
-                        <a href="{{ URL::to('admin/groups') }}">
-                            <i class="fa fa-angle-double-right"></i>
-                            Groups
-                        </a>
-                        </li>
-                        <li {!! (Request::is(
-                        'admin/groups/create') ? 'class="active" id="active"' : '') !!}>
-                        <a href="{{ URL::to('admin/groups/create') }}">
-                            <i class="fa fa-angle-double-right"></i>
-                            Add New Group
-                        </a>
-                        </li>
-                        <li {!! (Request::is(
-                        'admin/groups/any_user') ? 'class="active" id="active"' : '') !!}>
-                        <a href="{{ URL::to('admin/groups/any_user') }}">
-                            <i class="fa fa-angle-double-right"></i>
-                            Any User Access
-                        </a>
-                        </li>
-                        @if (Sentry::getUser()->hasAccess('admin'))
-                            <li {!! (Request::is('admin/groups/admin_only') ? 'class="active" id="active"' : '') !!}>
-                            <a href="{{ URL::to('admin/groups/admin_only') }}">
-                                <i class="fa fa-angle-double-right"></i>
-                                Admin Only Access
-                            </a>
-                            </li>
-                        @endif
-                    </ul>
-                    </li>
+
                     <li {!! (Request::is(
                     'admin/googlemaps') || Request::is('admin/vectormaps') || Request::is('admin/advancedmaps') ?
                     'class="active"' : '') !!}>
