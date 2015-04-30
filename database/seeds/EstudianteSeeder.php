@@ -15,6 +15,10 @@ class EstudianteSeeder extends DatabaseSeeder {
             'name'    => 'Maria Camila',
             'code'    => '3456842'
         ] );
+        Estudiante::create( [
+            'name'    => 'Juan Camilo',
+            'code'    => '3434567'
+        ] );
     }
 
 }
