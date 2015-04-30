@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder {
 
         $this->call( 'AdminSeeder' );
         $this->call( 'BeaconSeeder' );
+        $this->call( 'EstudianteSeeder' );
     }
 
 }
