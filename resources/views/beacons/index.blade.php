@@ -83,6 +83,9 @@
                                             </a>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td colspan="8">{{{ $beacon->mensaje }}}</td>
+                                    </tr>
                                 @endforeach
                                 </tbody>
                             </table>

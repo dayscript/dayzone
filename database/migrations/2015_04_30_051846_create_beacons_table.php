@@ -21,6 +21,7 @@ class CreateBeaconsTable extends Migration {
             $table->string('minor');
             $table->string('image');
             $table->string('materia');
+            $table->string('mensaje');
             $table->string('mesa');
 			$table->timestamps();
 		});
