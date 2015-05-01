@@ -34,7 +34,7 @@
                         </h4>
 
                         <div class="pull-right">
-                            <a href="{{ route('create/group') }}" class="btn btn-sm btn-default"><span
+                            <a href="{{ action('BeaconsController@create') }}" class="btn btn-sm btn-default"><span
                                         class="glyphicon glyphicon-plus"></span> Agregar</a>
                         </div>
                     </div>

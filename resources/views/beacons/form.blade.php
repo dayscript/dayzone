@@ -20,6 +20,11 @@
     {!! Form::textarea('mensaje',null,['class' => 'form-control']) !!}
 </div>
 <div class="form-group">
-    {!! Form::submit($submitButtonText,['class' => 'btn btn-primary form-control']) !!}
+    <a class="btn btn-danger" href="{{ action('BeaconsController@index') }}">
+        @lang('button.cancel')
+    </a>
+    <button type="submit" class="btn btn-success">
+        {{ $submitButtonText }}
+    </button>
 </div>
 

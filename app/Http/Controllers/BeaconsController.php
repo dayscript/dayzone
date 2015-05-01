@@ -88,4 +88,12 @@ class BeaconsController extends Controller {
         return redirect( 'admin/beacons' );
     }
 
+    public function create()
+    {
+        $materias = $this->materias;
+        $evaluaciones = $this->evaluaciones;
+        return view('beacons.create',compact('materias','evaluaciones'));
+    }
+
+
 }

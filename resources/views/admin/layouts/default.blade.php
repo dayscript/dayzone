@@ -308,7 +308,7 @@
 
                     </li>
                     <li {!! (Request::is(
-                    'admin/beacons') ? 'class="active"' : '') !!}>
+                    'admin/beacons') || Request::is('admin/beacons/create') ? 'class="active"' : '') !!}>
                     <a href="#">
                         <i class="livicon" data-name="pin-on" data-size="18" data-c="#67C5DF" data-hc="#67C5DF"
                            data-loop="true"></i>
@@ -323,6 +323,13 @@
                             Listado
                         </a>
                         </li>
+                        <li {!! (Request::is(
+                        'admin/beacons/create') ? 'class="active" id="active"' : '') !!}>
+                        <a href="{{ URL::to('admin/beacons/create') }}">
+                            <i class="fa fa-angle-double-right"></i>
+                            Agregar beacon
+                        </a>
+                        </li>
                     </ul>
                     </li>
 
@@ -332,7 +339,7 @@
                     <a href="#">
                         <i class="livicon" data-name="user" data-size="18" data-c="#6CC66C" data-hc="#6CC66C"
                            data-loop="true"></i>
-                        <span class="title">Users</span>
+                        <span class="title">Usuarios</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="sub-menu">
@@ -340,14 +347,14 @@
                         'admin/users') ? 'class="active" id="active"' : '') !!}>
                         <a href="{{ URL::to('admin/users') }}">
                             <i class="fa fa-angle-double-right"></i>
-                            Users
+                            Usuarios
                         </a>
                         </li>
                         <li {!! (Request::is(
                         'admin/users/create') ? 'class="active" id="active"' : '') !!}>
                         <a href="{{ URL::to('admin/users/create') }}">
                             <i class="fa fa-angle-double-right"></i>
-                            Add New User
+                            Agregar nuevo usuario
                         </a>
                         </li>
                         <li {!! ((Request::is(
@@ -355,14 +362,14 @@
                         !!}>
                         <a href="{{ URL::route('users.show',Sentry::getUser()->id) }}">
                             <i class="fa fa-angle-double-right"></i>
-                            View Profile
+                            Ver Perfil
                         </a>
                         </li>
                         <li {!! (Request::is(
                         'admin/deleted_users') ? 'class="active" id="active"' : '') !!}>
                         <a href="{{ URL::to('admin/deleted_users') }}">
                             <i class="fa fa-angle-double-right"></i>
-                            Deleted Users
+                            Usuarios eliminados
                         </a>
                         </li>
                     </ul>
@@ -373,7 +380,7 @@
                     <a href="#">
                         <i class="livicon" data-name="users" data-size="18" data-c="#418BCA" data-hc="#418BCA"
                            data-loop="true"></i>
-                        <span class="title">Groups</span>
+                        <span class="title">Grupos</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="sub-menu">
@@ -381,28 +388,28 @@
                         'admin/groups') ? 'class="active" id="active"' : '') !!}>
                         <a href="{{ URL::to('admin/groups') }}">
                             <i class="fa fa-angle-double-right"></i>
-                            Groups
+                            Grupos
                         </a>
                         </li>
                         <li {!! (Request::is(
                         'admin/groups/create') ? 'class="active" id="active"' : '') !!}>
                         <a href="{{ URL::to('admin/groups/create') }}">
                             <i class="fa fa-angle-double-right"></i>
-                            Add New Group
+                            Agregar nuevo grupo
                         </a>
                         </li>
                         <li {!! (Request::is(
                         'admin/groups/any_user') ? 'class="active" id="active"' : '') !!}>
                         <a href="{{ URL::to('admin/groups/any_user') }}">
                             <i class="fa fa-angle-double-right"></i>
-                            Any User Access
+                            Cualquier usuario
                         </a>
                         </li>
                         @if (Sentry::getUser()->hasAccess('admin'))
                             <li {!! (Request::is('admin/groups/admin_only') ? 'class="active" id="active"' : '') !!}>
                             <a href="{{ URL::to('admin/groups/admin_only') }}">
                                 <i class="fa fa-angle-double-right"></i>
-                                Admin Only Access
+                                Solo para Admin
                             </a>
                             </li>
                         @endif
@@ -414,7 +421,7 @@
                     <a href="#">
                         <i class="livicon" data-name="medal" data-size="18" data-c="#6CC66C" data-hc="#6CC66C"
                            data-loop="true"></i>
-                        <span class="title">Builders</span>
+                        <span class="title">Constructores</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="sub-menu">
