@@ -30,7 +30,7 @@ class RouteServiceProvider extends ServiceProvider {
         {
             try
             {
-                return Estudiante::where( 'code', $code )->firstOrNew( );
+                return Estudiante::where( 'code', $code )->findOrNew( );
             } catch ( \Exception $e )
             {
                 return new Estudiante(['name'=>'']);
