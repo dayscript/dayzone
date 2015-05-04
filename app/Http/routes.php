@@ -102,6 +102,7 @@ Route::group(array('prefix' => 'admin'), function () {
      */
     Route::resource('beacons','BeaconsController');
     Route::resource('estudiantes','EstudiantesController');
+    Route::resource('pings','PingsController');
 
 
     Route::post('crop_demo','JoshController@crop_demo');

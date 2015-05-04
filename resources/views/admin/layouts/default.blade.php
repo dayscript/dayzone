@@ -330,6 +330,13 @@
                             Agregar beacon
                         </a>
                         </li>
+                        <li {!! (Request::is(
+                        'admin/pings') ? 'class="active"' : '') !!}>
+                        <a href="{{ URL::to('admin/pings') }}">
+                            <i class="fa fa-angle-double-right"></i>
+                            Logs de acceso
+                        </a>
+                        </li>
                     </ul>
                     </li>
 
