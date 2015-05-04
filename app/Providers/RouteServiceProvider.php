@@ -25,7 +25,7 @@ class RouteServiceProvider extends ServiceProvider {
     public function boot( Router $router )
     {
         parent::boot( $router );
-        $router->model( 'beacons', function ( $minor ){
+        $router->bind( 'beacons', function ( $minor ){
             return Beacon::firstOrNew( [ 'minor' => $minor ] );
         } );
         $router->model( 'estudiantes', 'App\Estudiante' );
