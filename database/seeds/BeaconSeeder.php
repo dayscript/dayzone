@@ -8,10 +8,10 @@ class BeaconSeeder extends DatabaseSeeder {
     {
         DB::table( 'beacons' )->delete();
         Beacon::create( [
-            'name'    => 'Azul - Icy Marshmallow',
+            'name'    => 'Demo - Ice 1',
             'uuid'    => '11EFEBC8-CD29-11E3-B415-1A514932AC01',
             'major'   => '2258',
-            'minor'   => '35537',
+            'minor'   => '2',
             'materia' => 1,
             'mesa'    => 54,
             'image'   => '/assets/img/beacons/ice.png',
@@ -21,40 +21,40 @@ Para ver todas las opciones de posgrados haz click a continuación.',
             'evaluacion'=>'Ninguna'
         ] );
         Beacon::create( [
-            'name'    => 'Morado - Blueberry Pie',
+            'name'    => 'Demo - Blueberry 1',
             'uuid'    => '11EFEBC8-CD29-11E3-B415-1A514932AC01',
             'major'   => '2258',
-            'minor'   => '35538',
+            'minor'   => '1',
             'materia' => 2,
             'mesa'    => 23,
             'image'   => '/assets/img/beacons/blueberry.png'
         ] );
         Beacon::create( [
-            'name'  => 'Verde - Mint Cocktail',
+            'name'  => 'Demo - Mint 1 - Corferias',
             'uuid'  => '11EFEBC8-CD29-11E3-B415-1A514932AC01',
             'major' => '2258',
-            'minor' => '35536',
+            'minor' => '3',
             'image' => '/assets/img/beacons/mint.png'
         ] );
         Beacon::create( [
-            'name'  => 'Azul 2 - Icy Marshmallow',
+            'name'  => 'Demo - Ice 2',
             'uuid'  => '11EFEBC8-CD29-11E3-B415-1A514932AC01',
             'major' => '2258',
-            'minor' => '35539',
+            'minor' => '4',
             'image' => '/assets/img/beacons/ice.png'
         ] );
         Beacon::create( [
-            'name'  => 'Morado 2 - Blueberry Pie',
+            'name'  => 'Demo - Blueberry 2',
             'uuid'  => '11EFEBC8-CD29-11E3-B415-1A514932AC01',
             'major' => '2258',
-            'minor' => '35540',
+            'minor' => '5',
             'image' => '/assets/img/beacons/blueberry.png'
         ] );
         Beacon::create( [
-            'name'  => 'Verde 2 - Mint Cocktail',
+            'name'  => 'Demo - Mint 2',
             'uuid'  => '11EFEBC8-CD29-11E3-B415-1A514932AC01',
             'major' => '2258',
-            'minor' => '35541',
+            'minor' => '6',
             'image' => '/assets/img/beacons/mint.png'
         ] );
     }
