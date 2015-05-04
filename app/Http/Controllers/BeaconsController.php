@@ -63,7 +63,7 @@ class BeaconsController extends Controller {
         else
             $beacon->evaluacion = "";
 
-        Ping::create(['beacon'=>$beacon->minor,'materia'=>$beacon->materia,'user'=>'Juan Carlos']);
+        Ping::create(['beacon'=>$beacon->minor,'materia'=>$this->materias[$beacon->materia],'user'=>'Juan Carlos']);
         return $beacon;
 
         //return view( 'beacons.show', compact( 'beacon' ) );
