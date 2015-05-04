@@ -8,6 +8,15 @@ class BeaconSeeder extends DatabaseSeeder {
     {
         DB::table( 'beacons' )->delete();
         Beacon::create( [
+            'name'    => 'Demo - Blueberry 1',
+            'uuid'    => '11EFEBC8-CD29-11E3-B415-1A514932AC01',
+            'major'   => '2258',
+            'minor'   => '1',
+            'materia' => 2,
+            'mesa'    => 23,
+            'image'   => '/assets/img/beacons/blueberry.png'
+        ] );
+        Beacon::create( [
             'name'    => 'Demo - Ice 1',
             'uuid'    => '11EFEBC8-CD29-11E3-B415-1A514932AC01',
             'major'   => '2258',
@@ -19,15 +28,6 @@ class BeaconSeeder extends DatabaseSeeder {
 
 Para ver todas las opciones de posgrados haz click a continuación.',
             'evaluacion'=>'Ninguna'
-        ] );
-        Beacon::create( [
-            'name'    => 'Demo - Blueberry 1',
-            'uuid'    => '11EFEBC8-CD29-11E3-B415-1A514932AC01',
-            'major'   => '2258',
-            'minor'   => '1',
-            'materia' => 2,
-            'mesa'    => 23,
-            'image'   => '/assets/img/beacons/blueberry.png'
         ] );
         Beacon::create( [
             'name'  => 'Demo - Mint 1 - Corferias',
