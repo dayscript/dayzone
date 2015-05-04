@@ -54,7 +54,7 @@
                                         <td>{{{ $ping->created_at }}}</td>
                                         <td>{{{ $ping->user}}}</td>
                                         <td>{{{ $ping->materia }}}</td>
-                                        <td>{{{ $beacon->beacon }}}</td>
+                                        <td>{{{ $ping->beacon }}}</td>
                                     </tr>
                                 @endforeach
                                 </tbody>
