@@ -1,5 +1,6 @@
 <?php namespace App\Providers;
 
+use App\Beacon;
 use App\Estudiante;
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -24,7 +25,9 @@ class RouteServiceProvider extends ServiceProvider {
     public function boot( Router $router )
     {
         parent::boot( $router );
-        $router->model( 'beacons', 'App\Beacon' );
+        $router->model( 'beacons', function ( $minor ){
+            return Beacon::firstOrNew( [ 'minor' => $minor ] );
+        } );
         $router->model( 'estudiantes', 'App\Estudiante' );
         $router->bind( 'estudiantes', function ( $code )
         {
