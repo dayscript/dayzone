@@ -4,6 +4,7 @@ use App\Beacon;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Ping;
 use Illuminate\Http\Request;
 
 class BeaconsController extends Controller {
@@ -62,7 +63,9 @@ class BeaconsController extends Controller {
         else
             $beacon->evaluacion = "";
 
+        Ping::create(['beacon'=>$beacon->id]);
         return $beacon;
+
         //return view( 'beacons.show', compact( 'beacon' ) );
     }
 
