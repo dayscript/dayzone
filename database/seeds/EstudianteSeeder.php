@@ -9,15 +9,15 @@ class EstudianteSeeder extends DatabaseSeeder {
         DB::table( 'estudiantes' )->delete();
         Estudiante::create( [
             'name'    => 'Juan Carlos',
-            'code'=>'64509928'
+            'code'=>'645'
         ] );
         Estudiante::create( [
             'name'    => 'Maria Camila',
-            'code'    => '3456842'
+            'code'    => '646'
         ] );
         Estudiante::create( [
             'name'    => 'Juan Camilo',
-            'code'    => '3434567'
+            'code'    => '647'
         ] );
     }
 
